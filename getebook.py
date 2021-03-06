@@ -63,6 +63,7 @@ def getebook():
         ts = re.sub(u"[^\u4e00-\u9fa5\u0030-\u0039]", "", ts)  # 只保留标题中的中文
         s = open(cd + booktitle + ".txt", "a")
         s.write(ts + '\n')
+        s.close()
 
         conText = elem.xpath("//div[@id='content']/text()")  # 小说内容
         for val in conText:  # 保存小说内容
